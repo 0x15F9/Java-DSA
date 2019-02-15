@@ -13,5 +13,5 @@ A repository of Data Structures and Algorithms written in Java.
 ### Algorithms
 
 - [x] Game of Life
-- [ ] Comparator
+- [x] Comparator
 - [x] Comparable
