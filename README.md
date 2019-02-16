@@ -15,3 +15,4 @@ A repository of Data Structures and Algorithms written in Java.
 - [x] Game of Life
 - [x] Comparator
 - [x] Comparable
+- [ ] Labyrinth
