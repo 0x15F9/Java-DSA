@@ -9,6 +9,8 @@ A repository of Data Structures and Algorithms written in Java.
 - [ ] ArrayList
 - [ ] Set
 - [ ] HashSet
+- [ ] LinkedList
+- [x] 2D LinkedList
 
 ### Algorithms
 
