@@ -18,3 +18,8 @@ A repository of Data Structures and Algorithms written in Java.
 - [x] Comparator
 - [x] Comparable
 - [ ] Labyrinth
+
+### Miscellaneous
+
+- [x] Read File
+- [x] Write File 
