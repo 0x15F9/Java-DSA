@@ -92,4 +92,18 @@ public class SinglyLinkedList {
         System.out.println("∅]");
     }
 
+    /**
+     * Returns true if a node which contains data
+     * 
+     * @param data
+     * @return boolean exists
+     */
+    public boolean exists(int data) {
+        Node node = head;
+        while (node != null && node.getData() != data) {
+            node = node.getNextPointer();
+        }
+        return node != null && node.getData() == data;
+    }
+
 }
