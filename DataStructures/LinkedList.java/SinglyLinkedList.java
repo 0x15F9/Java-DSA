@@ -54,24 +54,6 @@ public class SinglyLinkedList {
     }
 
     /**
-     * Traverse linked list till the end
-     */
-    public Node traversetoEnd() {
-        return (traversetoEnd(this.head));
-    }
-
-    public Node traversetoEnd(Node node) {
-        // FIXME: Error
-        if (node == null) {
-            head = new Node();
-            return head;
-        }
-        if (node.getNextPointer() == null)
-            return node;
-        return traversetoEnd(node.getNextPointer());
-    }
-
-    /**
      * Display the linked list
      */
     public void display() {
