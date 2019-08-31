@@ -21,6 +21,21 @@ public class SinglyLinkedList {
     }
 
     /**
+     * Add a new Node at head
+     * 
+     * @param data
+     */
+    public void addDataAtHead(int data) {
+        Node n = new Node(data);
+        if (this.head == null) {
+            this.head = n;
+        } else {
+            n.setNextPointer(head);
+            head = n;
+        }
+    }
+
+    /**
      * Display the linked list
      */
     public void display() {
