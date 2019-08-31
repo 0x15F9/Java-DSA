@@ -36,6 +36,42 @@ public class SinglyLinkedList {
     }
 
     /**
+     * Add a new Node at tail
+     * 
+     * @param data
+     */
+    public void addDataAtTail(int data) {
+        Node thisNode = head;
+        Node newNode = new Node(data);
+        if (thisNode == null) { // LL is currently empty
+            head = newNode;
+            return;
+        }
+        while (thisNode.hasNextPointer()) {
+            thisNode = thisNode.getNextPointer();
+        }
+        thisNode.setNextPointer(newNode);
+    }
+
+    /**
+     * Traverse linked list till the end
+     */
+    public Node traversetoEnd() {
+        return (traversetoEnd(this.head));
+    }
+
+    public Node traversetoEnd(Node node) {
+        // FIXME: Error
+        if (node == null) {
+            head = new Node();
+            return head;
+        }
+        if (node.getNextPointer() == null)
+            return node;
+        return traversetoEnd(node.getNextPointer());
+    }
+
+    /**
      * Display the linked list
      */
     public void display() {
@@ -49,7 +85,7 @@ public class SinglyLinkedList {
             display(node.getNextPointer());
             return;
         }
-        System.out.println("NULL]");
+        System.out.println("∅]");
     }
 
 }
