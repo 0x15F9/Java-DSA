@@ -6,6 +6,12 @@ public class Node {
     Node nextPointer;
     int data;
 
+    public Node() {
+        this.previousPointer = null;
+        this.nextPointer = null;
+        this.data = null;
+    }
+
     public Node(int data) {
         this.previousPointer = null;
         this.nextPointer = null;
@@ -26,6 +32,10 @@ public class Node {
 
     public void setNextPointer(Node nextPointer) {
         this.nextPointer = nextPointer;
+    }
+
+    public boolean hasNextPointer() {
+        return nextPointer != null;
     }
 
     public int getData() {
