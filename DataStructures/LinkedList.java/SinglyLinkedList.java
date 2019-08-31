@@ -36,6 +36,28 @@ public class SinglyLinkedList {
     }
 
     /**
+     * Adds a new node in order, starting from the left
+     * 
+     * @param data
+     */
+    public void addDataInOrder(int data) {
+        if (head == null) { // LL is empty
+            addDataAtHead(data);
+            return;
+        }
+        Node newNode = new Node(data);
+        Node currentNode = head;
+        Node nextNode = currentNode.getNextPointer();
+        while (currentNode.hasNextPointer() && currentNode.getNextPointer().getData() < data) {
+            currentNode = nextNode;
+            nextNode = currentNode.getNextPointer();
+        }
+        newNode.setNextPointer(currentNode.getNextPointer());
+        currentNode.setNextPointer(newNode);
+
+    }
+
+    /**
      * Add a new Node at tail
      * 
      * @param data
