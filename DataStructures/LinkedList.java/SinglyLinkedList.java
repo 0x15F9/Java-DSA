@@ -135,4 +135,15 @@ public class SinglyLinkedList {
         return node;
     }
 
+    /**
+     * Delete the first Node
+     */
+    public void deleteFirst() {
+        if (head != null) {
+            Node prevHead = head;
+            head = prevHead.getNextPointer();
+            prevHead = null;
+        }
+    }
+
 }
