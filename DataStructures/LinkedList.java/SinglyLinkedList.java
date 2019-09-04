@@ -2,7 +2,7 @@
  * SinglyLinkedList
  */
 public class SinglyLinkedList {
-    Node head;
+    private Node head;
 
     /**
      * Create a singly linked list
@@ -152,4 +152,17 @@ public class SinglyLinkedList {
         }
     }
 
+    /** Counts the number of nodes in the Linked list */
+    public int nodeCount() {
+        int count = 0;
+        Node n = head;
+        if (n != null) {
+            while (n.hasNextPointer()) {
+                count++;
+                n = n.getNextPointer();
+            }
+            count++;
+        }
+        return count;
+    }
 }
