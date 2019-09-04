@@ -124,4 +124,15 @@ public class SinglyLinkedList {
         return head;
     }
 
+    /**
+     * Get tail node
+     */
+    public Node getTail() {
+        Node node = head;
+        while (node.hasNextPointer()) {
+            node = node.getNextPointer();
+        }
+        return node;
+    }
+
 }
