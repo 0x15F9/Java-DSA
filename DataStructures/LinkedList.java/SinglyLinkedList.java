@@ -165,4 +165,14 @@ public class SinglyLinkedList {
         }
         return count;
     }
+
+    /**
+     * Appends a second linked list at the end of the current one
+     * 
+     * @param sll
+     */
+    public void merge(SinglyLinkedList sll) {
+        Node tail = getTail();
+        tail.setNextPointer(sll.getHead());
+    }
 }
