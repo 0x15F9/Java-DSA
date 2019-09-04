@@ -4,20 +4,28 @@
 public class SinglyLinkedListTest {
 
     public static void main(String[] args) {
-        SinglyLinkedList singlyLinkedList1 = new SinglyLinkedList();
-        singlyLinkedList1.addDataInOrder(1);
-        singlyLinkedList1.addDataInOrder(2);
-        singlyLinkedList1.addDataInOrder(3);
-        singlyLinkedList1.addDataInOrder(4);
-        singlyLinkedList1.display();
-        SinglyLinkedList singlyLinkedList2 = new SinglyLinkedList();
-        singlyLinkedList2.addDataInOrder(2);
-        singlyLinkedList2.addDataInOrder(3);
-        singlyLinkedList2.addDataInOrder(4);
-        singlyLinkedList2.addDataAtHead(5);
-        singlyLinkedList2.display();
-        singlyLinkedList1.merge(singlyLinkedList2);
-        singlyLinkedList2.display();
-        singlyLinkedList1.display();
+        SinglyLinkedList sll = new SinglyLinkedList();
+        sll.addDataInOrder(1);
+        sll.addDataInOrder(2);
+        sll.addDataInOrder(3);
+        sll.addDataInOrder(4);
+        sll.addDataInOrder(5);
+        sll.addDataInOrder(6);
+        System.out.print("Before ");
+        sll.display();
+        Node pa = sll.getHead();
+        Node a = pa.getNextPointer();
+
+        Node pb = a.getNextPointer().getNextPointer();
+        Node b = pb.getNextPointer();
+
+        System.out.println(pa.getData());
+        System.out.println(a.getData());
+        System.out.println(pb.getData());
+        System.out.println(b.getData());
+
+        sll.swap(pa, a, pb, b);
+
+        sll.display();
     }
 }

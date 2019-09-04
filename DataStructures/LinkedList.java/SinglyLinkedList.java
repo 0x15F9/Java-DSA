@@ -175,4 +175,27 @@ public class SinglyLinkedList {
         Node tail = getTail();
         tail.setNextPointer(sll.getHead());
     }
+
+    // public void insertionSort() {
+    // if (!isEmpty() || !head.hasNextPointer()) { // has more than 2 items
+
+    // }
+    // }
+
+    /**
+     * Swaps 2 nodes given the node and their previous node
+     * 
+     * @param node1prev
+     * @param node1
+     * @param node2
+     * @param node2prev
+     */
+    public void swap(Node node1prev, Node node1, Node node2prev, Node node2) {
+        Node t1 = node1;
+        Node t2 = node2.getNextPointer();
+        node1prev.setNextPointer(node2);
+        node2.setNextPointer(node1.getNextPointer());
+        node2prev.setNextPointer(t1);
+        node1.setNextPointer(t2);
+    }
 }
