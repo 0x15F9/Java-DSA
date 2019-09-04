@@ -106,4 +106,13 @@ public class SinglyLinkedList {
         return node != null && node.getData() == data;
     }
 
+    /**
+     * Returns whether the head is null
+     * 
+     * @return
+     */
+    public boolean isEmpty() {
+        return head == null;
+    }
+
 }
