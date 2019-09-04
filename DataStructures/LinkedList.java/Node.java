@@ -2,9 +2,9 @@
  * Node
  */
 public class Node {
-    Node previousPointer;
-    Node nextPointer;
-    int data;
+    private Node previousPointer;
+    private Node nextPointer;
+    private int data;
 
     public Node() {
         this.previousPointer = null;
