@@ -115,4 +115,13 @@ public class SinglyLinkedList {
         return head == null;
     }
 
+    /**
+     * Get the node pointed by head
+     * 
+     * @return
+     */
+    public Node getHead() {
+        return head;
+    }
+
 }

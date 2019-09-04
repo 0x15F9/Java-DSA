@@ -5,8 +5,8 @@ public class SinglyLinkedListTest {
 
     public static void main(String[] args) {
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        System.out.println(singlyLinkedList.isEmpty());
         singlyLinkedList.addDataAtTail(1);
+        System.out.println(singlyLinkedList.getHead().getData());
         singlyLinkedList.addDataAtTail(2);
         singlyLinkedList.addDataAtTail(5);
         // singlyLinkedList.display();
@@ -14,6 +14,7 @@ public class SinglyLinkedListTest {
         singlyLinkedList.addDataInOrder(4);
         singlyLinkedList.addDataInOrder(3);
         singlyLinkedList.display();
+        System.out.println(singlyLinkedList.getHead().getData());
         System.out.println(singlyLinkedList.isEmpty());
 
     }
