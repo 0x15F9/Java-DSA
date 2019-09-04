@@ -44,16 +44,22 @@ public class SinglyLinkedList {
         if (head == null) { // LL is empty
             addDataAtHead(data);
             return;
+        } else if (!head.hasNextPointer()) { // ll has 1 item
+            if (data < head.getData())
+                addDataAtHead(data);
+            else
+                addDataAtTail(data);
+        } else {
+            Node newNode = new Node(data);
+            Node currentNode = head;
+            Node nextNode = currentNode.getNextPointer();
+            while (currentNode.hasNextPointer() && currentNode.getNextPointer().getData() < data) {
+                currentNode = nextNode;
+                nextNode = currentNode.getNextPointer();
+            }
+            newNode.setNextPointer(currentNode.getNextPointer());
+            currentNode.setNextPointer(newNode);
         }
-        Node newNode = new Node(data);
-        Node currentNode = head;
-        Node nextNode = currentNode.getNextPointer();
-        while (currentNode.hasNextPointer() && currentNode.getNextPointer().getData() < data) {
-            currentNode = nextNode;
-            nextNode = currentNode.getNextPointer();
-        }
-        newNode.setNextPointer(currentNode.getNextPointer());
-        currentNode.setNextPointer(newNode);
 
     }
 
