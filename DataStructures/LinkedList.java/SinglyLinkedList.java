@@ -130,6 +130,10 @@ public class SinglyLinkedList {
         return head;
     }
 
+    public void setHead(Node node) {
+        this.head = node;
+    }
+
     /**
      * Get tail node
      */
