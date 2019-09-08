@@ -1,4 +1,3 @@
-package Mini_Calculator;
 import java.lang.Math;
 import java.awt.*;
 import java.awt.event.ActionEvent;
